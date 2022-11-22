@@ -1,0 +1,79 @@
+{
+    "dump_path": ["./dumped"],
+    "save_periodic": [0],
+    "fp16": ["true"],
+    "amp": [2],
+    "accumulate_gradients": [1],
+    "clip_grad_norm": [5],
+    "local_rank": [-1],
+
+    "n_enc_hidden_layers": [1],
+    "n_dec_hidden_layers": [1],
+    "dropout": [0],
+    "norm_attention":["false"],
+    "attention_dropout": [0],
+    "share_inout_emb": ["false"],
+    "sinusoidal_embeddings": ["false"],
+    "optimizer": ["adam_warmup,lr=0.00001,warmup_updates=8000"],
+    
+    "max_len": [512],
+    "max_output_len":[32],
+    "epoch_size": [500000],
+    "max_epoch": [1000],
+    "num_workers": [3],
+    "export_data": ["false"],
+    "reload_data": [""],
+    "reload_size": [-1],
+    "batch_load": ["false"],
+    
+    "env_name": ["lattice"],
+    "tasks": ["lattice"],
+    "env_base_seed": [-3],
+    
+    "eval_size": [1000],
+    "operation": ["circ_rlwe"],
+    "Q":  [251],
+    "input_int_base": [81],
+    "output_int_base": [81],
+    "balanced_base": ["false"],
+
+    "N":[50],
+    "hamming":[3],
+    "sigma": [3],
+    "batch_size":[150],
+    "batch_size_eval":[70],       
+    "correctQ": ["false"],
+    "secrettype": ["b"],
+    "error": ["true"],
+    
+    "reuse": ["true"],
+    "num_reuse_samples": [1000000],
+    "times_reused": [10],
+    "K":[1],
+
+    "no_separator": ["true"],
+    "windows":["false"],
+    "nvidia_apex":["false"],
+    "enc_loop_idx": [1],
+    "dec_loop_idx": [1],
+    "n_enc_layers": [2],
+    "n_dec_layers": [2],
+
+    "gated":[1],
+
+    "enc_emb_dim":[1024],
+    "dec_emb_dim": [512],
+    "n_enc_heads":[16],
+    "n_dec_heads":[4],
+ 
+    "enc_loops":[2],
+    "dec_loops":[8],
+
+    "reload_model": [""],
+    "freeze_embeddings": ["false"],
+    
+    "eval_verbose": [0],
+    "beam_eval": [1],
+    "stopping_criterion": ["_valid_lattice_xe_loss,1,75"],
+    "validation_metrics": ["_valid_lattice_xe_loss"]
+}
